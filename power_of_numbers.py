@@ -3,10 +3,14 @@ FInd the results of exponents
 '''
 
 def power(x, n):
-    assert x>=0 and n>=0, 'The number and exponent should be positive integers'
+    assert int(n)==n, 'The exponent shpuld be integer'
 
     if n == 0:
         return 1
+    
+    elif n<0:
+        return 1/x * power(x, n+1)
+    
     else:
         return x * power(x, n-1)
     
