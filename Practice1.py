@@ -17,7 +17,7 @@ def foo(array):
     print("sum = "str(sum)+", product = "+str(product))
 
 
-#calculat the time complexity of below code
+#calculate the time complexity of below code
 
 def printPairs(array):
     for i in array:
@@ -25,3 +25,9 @@ def printPairs(array):
             print(str(i)+","+str(j))
 
 
+#calculate the time complexity of the following code
+
+def printUnorderedPAirs(array):
+    for i in range(0, len(array)):
+        for j in range(i+1, len(array)):
+            print(array[i] + "," + array[j])
