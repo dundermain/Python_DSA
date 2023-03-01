@@ -15,3 +15,13 @@ def foo(array):
         product *= 1
 
     print("sum = "str(sum)+", product = "+str(product))
+
+
+#calculat the time complexity of below code
+
+def printPairs(array):
+    for i in array:
+        for j in array:
+            print(str(i)+","+str(j))
+
+
