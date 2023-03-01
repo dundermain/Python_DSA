@@ -49,3 +49,14 @@ def printUnorderedPAirs(arrayA, arrayB):
             for k in range(0, 100000):
                 print(str(arrayA[i]) + "," + str(arrayB[j]))
 #The answer is O(ab) 
+
+#Find the runtime of the following code
+    #this code reveres the array
+def reverse(array):
+    for i in range(0, int(len(array)/2)):
+        other = len(array)-i-1
+        temp = array[i]
+        array[i] = array[other]
+        array[other] = temp
+    print(array)
+#The answer is 
