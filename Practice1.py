@@ -39,7 +39,13 @@ def printUnorderedPairs(arrayA, arrayB):
     for i in range(len(arrayA)):
         for j in range(len(arrayB)):
             if arrayA[i] < arrayB[j]:
-                print(str(arrayA[i]) + "," + arrayB[j])
+                print(str(arrayA[i]) + "," + str(arrayB[j]))
 #The answer is O(ab) not O(n^2) because the loop will run for length of arrays 
 
 #Find the runtime or time complexity of the function
+def printUnorderedPAirs(arrayA, arrayB):
+    for i in range(len(arrayA)):
+        for j in range(len(arrayB)):
+            for k in range(0, 100000):
+                print(str(arrayA[i]) + "," + str(arrayB[j]))
+#The answer is O(ab) 
