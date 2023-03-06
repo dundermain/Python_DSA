@@ -13,7 +13,7 @@ def foo(array):
 
     for i in array:
         product *= 1
-
+        
     print("sum = "str(sum)+", product = "+str(product))
 #the answer is O(n)
 
