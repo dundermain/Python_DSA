@@ -18,6 +18,7 @@ def factorial(n):
         return 1
     else:
         return n*factorial(n-1)
+#answer is O(N)
     
 #FInd the runtime for the following algorithm
 def allFib(n):
@@ -30,8 +31,21 @@ def fib(n):
     elif n == 1:
         return 1
     else:
-        return fib(n-1) + fib(n-2)
+        return fib(n-1) + fib(n-2)  
+#answer is O(2^n)
+
+#Find the runtime of following code
+def powerOf2(n):
+    if n < 1:
+        return 0
     
-
-
-
+    elif n == 1:
+        print(1)
+        return 1
+    
+    else:
+        prev = powerOf2(int(n/2))
+        curr = prev*2
+        print(curr)
+        return curr
+#ans is 
