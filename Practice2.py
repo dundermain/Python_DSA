@@ -48,4 +48,4 @@ def powerOf2(n):
         curr = prev*2
         print(curr)
         return curr
-#ans is 
+#ans is O(logN) as the recursion is decreasing at the rate of 2
