@@ -14,3 +14,11 @@ def pattern(n,m):
 
     underscore_no = int(int(m) - int(len(barball))/2)
     up = ('-'*underscore_no+barball+'-'*underscore_no)
+
+  #lower pattern
+  for i in range(int(n/2),0):
+    barball = (".|."*(i*2+1))
+
+    underscore_no = int(int(m) - int(len(barball))/2)
+    down = ('-'*underscore_no+barball+'-'*underscore_no)
+    print(down)
