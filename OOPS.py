@@ -20,9 +20,14 @@ class SoftwareEngineer:
 
 #some dunder methods available in Python
 
-    def __str__(self):
+    def __str__(self):   #__str__ returns human readable string represenation of an object/instance 
         information = f"The name of the SE is {self.name}, age is {self.age}. {self.name} is working at level {self.level}"
         return information
+    
+    def _eq__(self, other): #__eq__ returns
+
+    
+
 
 
 se1 = SoftwareEngineer("Max", 20, "Junior", 5000)  #created an instance with their respecitve attributes as arguments
@@ -36,3 +41,10 @@ se1.code()
 #print(SoftwareEngineer.age)  #this will give error "AttributeError: type object 'SoftwareEngineer' has no attribute 'age'"
 
 print(se1) #This will call the __str__method and will print the information present there
+
+#Lets create another object with identical attributes as se1
+se2 = SoftwareEngineer("Max", 20, "Junior", 5000)
+
+print(se1 == se2) #This shpuld return True but it returns false because it compares the memory location. Since memory location will always be different 
+#hence it return false altough the object are identical to each other. Therefore we use __eq__ for comparison of objects attributes. Equality operator will
+#only check the object. If the object is same it will return true otherwise false. It doesnot care about whether the objects attributes are same or not
