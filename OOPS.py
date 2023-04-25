@@ -18,6 +18,12 @@ class SoftwareEngineer:
         print(f"{self.name} is writing a code in {langauge}")
 
 
+#some dunder methods available in Python
+
+    def __str__(self):
+        information = f"The name of the SE is {self.name}, age is {self.age}. {self.name} is working at level {self.level}"
+        return information
+
 
 se1 = SoftwareEngineer("Max", 20, "Junior", 5000)  #created an instance with their respecitve attributes as arguments
 
@@ -29,3 +35,4 @@ print(SoftwareEngineer.alias)
 se1.code()
 #print(SoftwareEngineer.age)  #this will give error "AttributeError: type object 'SoftwareEngineer' has no attribute 'age'"
 
+print(se1) #This will call the __str__method and will print the information present there
