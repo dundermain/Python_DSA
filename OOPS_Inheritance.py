@@ -17,7 +17,7 @@ class SoftwareEngineer(Employee):  #child class. It will use some attributes of 
 
     def __init__(self, name, age, salary, level):
         super().__init__(name, age, salary)     #we dont need to call self.name again here as it is present in our parent class. super() means super class or parent class. This will override the parent class attributes
-        self.level = level
+        self.level = level    #extending the attributes
 
     def debug(self):
         print(f"{self.name} is debugging")
@@ -41,4 +41,17 @@ print(d.name)
 
 
 #Polymorphism 
-#It gives a way to use a parent class method where the child class can still keep its methods as they are
+#It gives a way to use a parent class method where the child class can still keep its own methods as they are
+#
+
+employees = [SoftwareEngineer("Max", 25, 6000, "Junior"), 
+             SoftwareEngineer("Lisa", 30, 9000, "Senior"),
+             Designer("Philips", 27, 7000)]
+
+
+def motivate_employees(employees):
+    for employee in employees:
+        employee.work()
+
+
+motivate_employees(employees)
