@@ -11,7 +11,7 @@ class SoftwareEngineer:
         self.level = level 
         self.salary = salary   #all these are instance attributes and can only be accssed by instance not by class
 
-    def code(self): #This is an instance method. A method is a function inside thre class and attribute is variable inside class
+    def code(self): #This is an instance method. A method is a function inside the class and attribute is variable inside class
         print(f"{self.name} is writing a code")
 
     def code_in_language(self, langauge): #we can pass arguments in methods as well
@@ -24,14 +24,14 @@ class SoftwareEngineer:
         information = f"The name of the SE is {self.name}, age is {self.age}. {self.name} is working at level {self.level}"
         return information
     
-    def _eq__(self, other): #__eq__ returns boolean as per our choice. UNlike ==, which compares object only, __eq__ can be used to compare attributes
+    def _eq__(self, other): #__eq__ returns boolean as per our choice. Unlike ==, which compares object only, __eq__ can be used to compare attributes
         return self.name == other.name and self.age == other.age
     
-    #Now if we want a clas method that can work for instance/object as well
+    #Now if we want a class method that can work without creating an instance/object as well
     #we use static method decorator
 
-    @staticmethod  #static method can be used even without calling object. If we dont use static method, then the method can only be accessed by class and not by object/instance
-    def entry_salary(age):  #we cannot use self attribute here as static methods can be accesses without object/instance
+    @staticmethod  #static method can be used even without creating an instance. If we dont use static method, then the method can only be accessed by the instance of class
+    def entry_salary(age):  #we cannot use self attribute here as static methods can be accessed without object/instance
         if age<25:
             return 5000
         if age<30:
